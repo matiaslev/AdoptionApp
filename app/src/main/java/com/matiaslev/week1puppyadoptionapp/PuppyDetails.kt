@@ -18,7 +18,9 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun PuppyDetails(navController: NavController) {
+fun PuppyDetails(navController: NavController, mainViewModel: MainViewModel) {
+    val puppy = mainViewModel.getSelectedPuppy()
+
     Column {
         TopAppBar {
 
@@ -42,7 +44,7 @@ fun PuppyDetails(navController: NavController) {
 
         }
 
-        Text(text = "Comming Soon...")
+        Text(text = "Details for: ${puppy.name}")
     }
 }
 
@@ -50,6 +52,8 @@ fun PuppyDetails(navController: NavController) {
 @Composable
 fun PuppyDetailsPreview() {
     val navController = rememberNavController()
+    val mainViewModel = MainViewModel()
+    mainViewModel.selectedPuppy.value = 0
 
-    PuppyDetails(navController)
+    PuppyDetails(navController, mainViewModel)
 }

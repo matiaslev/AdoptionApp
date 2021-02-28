@@ -59,9 +59,13 @@ fun EntryPoint(mainViewModel: MainViewModel) {
 
     NavHost(navController, startDestination = "list") {
 
-        composable("list") { PuppyList(puppies = Puppy.getMockedList(), navController) }
+        composable("list") {
+            PuppyList(puppies = mainViewModel.puppiesList, navController, mainViewModel)
+        }
 
-        composable("details") { PuppyDetails(navController) }
+        composable("details") {
+            PuppyDetails(navController, mainViewModel)
+        }
 
     }
 }

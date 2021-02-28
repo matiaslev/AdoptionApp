@@ -25,7 +25,7 @@ import com.matiaslev.week1puppyadoptionapp.ui.theme.Week1PuppyadoptionappTheme
 
 @ExperimentalAnimationApi
 @Composable
-fun PuppyList(puppies: List<Puppy>, navController: NavController) {
+fun PuppyList(puppies: List<Puppy>, navController: NavController, mainViewModel: MainViewModel) {
 
     val isAddPuppyVisible = remember { mutableStateOf(false) }
 
@@ -59,7 +59,7 @@ fun PuppyList(puppies: List<Puppy>, navController: NavController) {
         ) {
 
             items(puppies) { puppy ->
-                PuppyItem(puppy, navController)
+                PuppyItem(puppy, navController, mainViewModel)
             }
         }
     }
@@ -117,9 +117,10 @@ fun AddPuppy(isAddPuppyVisible: MutableState<Boolean>) {
 }
 
 @Composable
-fun PuppyItem(puppy: Puppy, navController: NavController) {
+fun PuppyItem(puppy: Puppy, navController: NavController, mainViewModel: MainViewModel) {
     Row(modifier = Modifier
         .clickable {
+            mainViewModel.selectedPuppy.value = puppy.id
             navController.navigate("details")
         }
     ) {
@@ -145,10 +146,11 @@ fun PuppyItem(puppy: Puppy, navController: NavController) {
 @Composable
 fun DefaultPreview() {
     val navController = rememberNavController()
+    val mainViewModel = MainViewModel()
 
     Week1PuppyadoptionappTheme {
         Surface(color = MaterialTheme.colors.background) {
-            PuppyList(Puppy.getMockedList(), navController)
+            PuppyList(mainViewModel.puppiesList, navController, mainViewModel)
         }
     }
 }
