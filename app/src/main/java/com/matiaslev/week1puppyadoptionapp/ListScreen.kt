@@ -14,6 +14,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -118,6 +119,8 @@ fun AddPuppy(isAddPuppyVisible: MutableState<Boolean>) {
 
 @Composable
 fun PuppyItem(puppy: Puppy, navController: NavController, mainViewModel: MainViewModel) {
+    val currentImage = remember { mutableStateOf(0) }
+
     Row(modifier = Modifier
         .clickable {
             mainViewModel.selectedPuppy.value = puppy.id
@@ -125,11 +128,16 @@ fun PuppyItem(puppy: Puppy, navController: NavController, mainViewModel: MainVie
         }
     ) {
         Image(modifier = Modifier
+            .width(150.dp)
+            .height(150.dp)
             .padding(15.dp)
             .clickable {
-
+                if (currentImage.value == 2) {
+                    currentImage.value = 0
+                } else currentImage.value++
             },
-            painter =  painterResource(id = R.drawable.ic_launcher_foreground),
+            contentScale = ContentScale.FillBounds,
+            painter =  painterResource(id = puppy.image[currentImage.value]),
             contentDescription = "Photo of: ${puppy.name}"
         )
         Column(modifier = Modifier

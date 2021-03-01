@@ -3,5 +3,6 @@ package com.matiaslev.week1puppyadoptionapp
 data class Puppy(
     val id: Int,
     val name: String,
-    val description: String
+    val description: String,
+    val image: List<Int>
 )
