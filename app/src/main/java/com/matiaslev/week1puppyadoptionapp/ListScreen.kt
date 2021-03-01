@@ -136,7 +136,7 @@ fun PuppyItem(puppy: Puppy, navController: NavController, mainViewModel: MainVie
                     currentImage.value = 0
                 } else currentImage.value++
             },
-            contentScale = ContentScale.FillBounds,
+            contentScale = ContentScale.Crop,
             painter =  painterResource(id = puppy.image[currentImage.value]),
             contentDescription = "Photo of: ${puppy.name}"
         )
