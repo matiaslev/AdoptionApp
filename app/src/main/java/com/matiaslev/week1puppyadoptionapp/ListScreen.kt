@@ -31,7 +31,9 @@ fun PuppyList(puppies: List<Puppy>, navController: NavController, mainViewModel:
     val isAddPuppyVisible = remember { mutableStateOf(false) }
 
     Column {
-        TopAppBar {
+        TopAppBar(
+            backgroundColor = MaterialTheme.colors.background
+        ) {
             
             Row(modifier = Modifier
                 .fillMaxSize(),

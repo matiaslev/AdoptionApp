@@ -27,7 +27,9 @@ fun PuppyDetails(navController: NavController, mainViewModel: MainViewModel) {
         .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
         ) {
-        TopAppBar {
+        TopAppBar(
+            backgroundColor = MaterialTheme.colors.background
+        ) {
 
             Row(modifier = Modifier
                 .fillMaxWidth(),
