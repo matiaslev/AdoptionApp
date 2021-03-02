@@ -7,157 +7,30 @@ class MainViewModel : ViewModel() {
 
     val puppiesList by lazy {
         listOf(
-
             Puppy(
                 id = 0,
-                name = "Nina",
-                description = "Morena, ladra mucho, hace caso, es miedosa",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
+                name = "Bonnie and Clyde",
+                description = "Hello, we are two little kittens looking for a home!",
+                image = listOf(R.drawable.bonnie)
             ),
             Puppy(
                 id = 1,
-                name = "Koki",
-                description = "Blanca, chiquita, caniche!, dormilona y vaga, viejita!",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 2,
-                name = "Dogui",
-                description = "Energetico, guardian, caniche!, blanco.",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-
-            Puppy(
-                id = 0,
                 name = "Nina",
-                description = "Morena, ladra mucho, hace caso, es miedosa",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 1,
-                name = "Koki",
-                description = "Blanca, chiquita, caniche!, dormilona y vaga, viejita!",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
+                description = "She is an adult dog, very cuddly and companion, she likes to spend the afternoons playing and is an excellent companion.\n" +
+                    "She gets along very well with children, and she is looking for a forever family where to spend her days.",
+                image = listOf(R.drawable.nina_1, R.drawable.nina_2, R.drawable.nina_3)
             ),
             Puppy(
                 id = 2,
+                name = "India",
+                description = "I am India, a one year old kitten, I am neutered, I am very naughty, I like to go for a walk and I get along well with all animals and I would like to find a family.",
+                image = listOf(R.drawable.india_1, R.drawable.india_2)
+            ),
+            Puppy(
+                id = 3,
                 name = "Dogui",
-                description = "Energetico, guardian, caniche!, blanco.",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-
-            Puppy(
-                id = 0,
-                name = "Nina",
-                description = "Morena, ladra mucho, hace caso, es miedosa",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 1,
-                name = "Koki",
-                description = "Blanca, chiquita, caniche!, dormilona y vaga, viejita!",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 2,
-                name = "Dogui",
-                description = "Energetico, guardian, caniche!, blanco.",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-
-            Puppy(
-                id = 0,
-                name = "Nina",
-                description = "Morena, ladra mucho, hace caso, es miedosa",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 1,
-                name = "Koki",
-                description = "Blanca, chiquita, caniche!, dormilona y vaga, viejita!",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 2,
-                name = "Dogui",
-                description = "Energetico, guardian, caniche!, blanco.",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-
-            Puppy(
-                id = 0,
-                name = "Nina",
-                description = "Morena, ladra mucho, hace caso, es miedosa",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 1,
-                name = "Koki",
-                description = "Blanca, chiquita, caniche!, dormilona y vaga, viejita!",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 2,
-                name = "Dogui",
-                description = "Energetico, guardian, caniche!, blanco.",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-
-            Puppy(
-                id = 0,
-                name = "Nina",
-                description = "Morena, ladra mucho, hace caso, es miedosa",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 1,
-                name = "Koki",
-                description = "Blanca, chiquita, caniche!, dormilona y vaga, viejita!",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 2,
-                name = "Dogui",
-                description = "Energetico, guardian, caniche!, blanco.",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-
-            Puppy(
-                id = 0,
-                name = "Nina",
-                description = "Morena, ladra mucho, hace caso, es miedosa",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 1,
-                name = "Koki",
-                description = "Blanca, chiquita, caniche!, dormilona y vaga, viejita!",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 2,
-                name = "Dogui",
-                description = "Energetico, guardian, caniche!, blanco.",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-
-            Puppy(
-                id = 0,
-                name = "Nina",
-                description = "Morena, ladra mucho, hace caso, es miedosa",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 1,
-                name = "Koki",
-                description = "Blanca, chiquita, caniche!, dormilona y vaga, viejita!",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
-            ),
-            Puppy(
-                id = 2,
-                name = "Dogui",
-                description = "Energetico, guardian, caniche!, blanco.",
-                image = listOf(R.drawable.ovejero_1, R.drawable.ovejero_2, R.drawable.ovejero_3)
+                description = "Dogui is a funny little puppy with crazy curlers who loves to play in the water. He would love to be part of your family forever!",
+                image = listOf(R.drawable.dogui_1, R.drawable.dogui_2)
             )
         )
     }

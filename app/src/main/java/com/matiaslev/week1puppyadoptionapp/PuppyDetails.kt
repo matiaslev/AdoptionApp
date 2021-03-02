@@ -5,9 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -72,11 +70,16 @@ fun PuppyDetails(navController: NavController, mainViewModel: MainViewModel) {
             text = puppy.description,
             style = MaterialTheme.typography.body1.copy(fontWeight = FontWeight.Bold)
         )
-        Text(
-            modifier = Modifier.padding(15.dp),
-            text = "Parque Luro",
-            style = MaterialTheme.typography.body2.copy(fontWeight = FontWeight.Bold)
-        )
+
+        Spacer(modifier = Modifier.height(100.dp))
+
+        Button(onClick = { }, modifier = Modifier
+            .fillMaxWidth()
+            .height(80.dp)
+            .padding(15.dp)) {
+            Text(text = "I will care of you..")
+            Image(painter = painterResource(id = R.drawable.ic_love), contentDescription = "Love Icon")
+        }
     }
 }
 
