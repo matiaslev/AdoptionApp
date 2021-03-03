@@ -43,7 +43,7 @@ fun PuppyDetails(navController: NavController, mainViewModel: MainViewModel) {
                     contentDescription = "Back"
                 )
 
-                Text(text = "Puppy Details")
+                Text(color = MaterialTheme.colors.primary, text = puppy.name)
 
             }
 
@@ -61,10 +61,6 @@ fun PuppyDetails(navController: NavController, mainViewModel: MainViewModel) {
             }
         }
 
-        Text(
-            text = puppy.name,
-            style = MaterialTheme.typography.h5.copy(fontWeight = FontWeight.Bold)
-        )
         Text(
             modifier = Modifier.padding(15.dp),
             text = puppy.description,

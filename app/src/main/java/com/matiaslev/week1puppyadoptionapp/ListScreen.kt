@@ -41,7 +41,7 @@ fun PuppyList(puppies: List<Puppy>, navController: NavController, mainViewModel:
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Spacer(modifier = Modifier)
-                Text(text = "Puppies List")
+                Text(color = MaterialTheme.colors.primary, text = "Puppies")
 
                 Image(modifier = Modifier
                     .padding(15.dp)
@@ -134,7 +134,7 @@ fun PuppyItem(puppy: Puppy, navController: NavController, mainViewModel: MainVie
             .height(150.dp)
             .padding(15.dp)
             .clickable {
-                if (currentImage.value == 2) {
+                if (currentImage.value == puppy.image.size - 1) {
                     currentImage.value = 0
                 } else currentImage.value++
             },
